@@ -1,0 +1,22 @@
+.counter {
+    border: solid 1px;
+    border-color: rgb(73, 73, 73);
+    border-radius: 10px;
+    box-shadow: 0 10px 6px -6px #777;
+    width: 150px;
+    padding: 2px 2px 2px 2px;
+    text-align: center;
+}
+
+.title {
+    font-size: 20px;
+    margin: 0px;
+}
+
+.value {
+    margin: 10px;
+}
+
+.increment {
+    margin: 10px;
+}
