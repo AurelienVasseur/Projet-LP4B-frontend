@@ -1,5 +1,13 @@
-<div class="counter">
-    <p class="title">Counter {{ position + 1 }}</p>
-    <p class="value">Valeur : {{ counterService.initialValue[position] }}</p>
-    <button class="increment" (click)="increment()">Incrémenter</button>
-</div>
+
+<mat-card class="counter" *ngIf="value">
+    
+    <mat-card-title>Compteur #{{ name }}</mat-card-title>
+    <mat-card-subtitle>N°{{ position }}</mat-card-subtitle>
+    
+    <mat-card-content>
+        <p>{{ value }}</p>
+    </mat-card-content>
+    <mat-card-actions>
+        <button mat-button (click)="increment()">Incrémenter</button>
+    </mat-card-actions>
+</mat-card>
