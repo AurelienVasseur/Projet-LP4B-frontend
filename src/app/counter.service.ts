@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Counter } from './counter';
 import { Observable } from 'rxjs';
@@ -16,9 +16,10 @@ export class CounterService {
     this.initialValue = [0, 0, 0];
   }
 
-  increment(position: number): number {
-    this.initialValue[position]++;
-    return this.initialValue[position];
+  increment(id: number): Observable<Counter> {
+    /*this.initialValue[position]++;
+    return this.initialValue[position];*/
+    return this.http.patch<Counter>(this.counterUrl + id + '.json', {});
   }
 
   getCounterValue(id: number): Observable<Counter> {
