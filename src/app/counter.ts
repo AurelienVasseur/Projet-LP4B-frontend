@@ -3,6 +3,10 @@ export class Counter {
   name: string;
   value: number;
   created_at: string;
-  update_at: string;
+  updated_at: string;
   url: string;
+
+  constructor() {
+    
+  }
 }

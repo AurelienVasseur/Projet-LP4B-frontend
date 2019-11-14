@@ -6,3 +6,9 @@
 .cards {
     text-align: center;
 }
+
+.counter {
+    width: 200px;
+    margin: 10px;
+    display: inline-block;
+}

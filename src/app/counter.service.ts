@@ -23,7 +23,7 @@ export class CounterService {
     return this.http.patch<Counter>(this.counterUrl + id + '.json', {});
   }
 
-  getCounterValue(id: number): Observable<Counter> {
+  getCounter(id: number): Observable<Counter> {
     return this.http.get<Counter>(this.counterUrl + id + '.json');
   }
 

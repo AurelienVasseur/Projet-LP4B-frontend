@@ -8,15 +8,9 @@
 </mat-card>
 
 <div class="cards">
-    <!--<app-counter [value]="value" *ngFor="let value of initialValue"></app-counter>-->
-    <!--<app-counter [position]=0></app-counter>
-    <app-counter [position]=1></app-counter>
-    <app-counter [position]=2></app-counter>-->
-
-    <app-counter 
-      *ngFor="let counter of counters"
-      [position]="counter.id"></app-counter>
-
+    <app-counter-card 
+        *ngFor="let counter of counters"
+        [position]='counter.id'></app-counter-card>
 </div>
 
 

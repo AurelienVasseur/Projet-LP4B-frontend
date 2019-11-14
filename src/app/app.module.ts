@@ -17,6 +17,8 @@ import { HomeComponent } from './home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ProfileComponent } from './profile/profile.component';
 import { Routes, RouterModule } from '@angular/router';
+import { MatMenuModule } from '@angular/material/menu';
+import { CounterCardComponent } from './counter-card/counter-card.component';
 
 
 
@@ -26,7 +28,8 @@ import { Routes, RouterModule } from '@angular/router';
     CounterComponent,
     NavbarComponent,
     HomeComponent,
-    ProfileComponent
+    ProfileComponent,
+    CounterCardComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +42,8 @@ import { Routes, RouterModule } from '@angular/router';
     MatIconModule,
     MatListModule,
     MatCardModule,
-    HttpClientModule
+    HttpClientModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]
