@@ -21,7 +21,8 @@ exports.handler = async (event, context) => {
 */
 
 exports.handler = async (event, context) => {
-    console.log(JSON.stringify(event),JSON.stringify(context) )
+    //console.log(JSON.stringify(event),JSON.stringify(context) )
+    console.log("Params : " + event.body);
 
     // Default options are marked with *
   await fetch('https://lp4asgadot.herokuapp.com/counters/'+event.body.counterId+'.json', {
