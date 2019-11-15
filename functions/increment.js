@@ -1,9 +1,9 @@
 const fetch = require('node-fetch');
 
-
+/*
 exports.handler = async (event, context) => {
     const counterId = event.body.counterId;
-    const route = "https://lp4asgadot.herokuapp.com/counters/" + counterId +'.json';
+    const route = "https://lp4asgadot.herokuapp.com/counters/" + counterId +'.json';*/
 
     /*return fetch(route, { 
         headers: { "Accept": "application/json" },
@@ -17,7 +17,7 @@ exports.handler = async (event, context) => {
     .catch(error => ({ statusCode: 422, body: String(error) }));*/
 
 
-    return fetch(route, {
+    /*return fetch(route, {
       headers: {
         "content-type": "application/json"
       },
@@ -31,10 +31,10 @@ exports.handler = async (event, context) => {
         statusCode: 422,
         body: `Oops! Something went wrong. ${error}`
       }));
-};
+};*/
 
 
-/*exports.handler = async (event, context) => {
+exports.handler = async (event, context) => {
     //console.log(JSON.stringify(event),JSON.stringify(context) )
     console.log("Params : " + event.body);
 
@@ -50,4 +50,4 @@ exports.handler = async (event, context) => {
         statusCode: 201,
         body: "Updated"
     };
-};*/
+};
