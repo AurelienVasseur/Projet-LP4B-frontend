@@ -36,7 +36,7 @@ export class CounterService {
 
   increment(id: number) { //: Observable<Counter>
     // return this.http.patch<Counter>(this.counterUrl + id + '.json', {});
-    this.http.patch<any>('/.netlify/functions/increment', { counterId: id }).subscribe();
+    this.http.patch<any>('/.netlify/functions/increment', { counterId: id });
   }
 
   getCounter(id: number): Observable<Counter> {
