@@ -27,12 +27,12 @@ export class CounterCardComponent implements OnInit {
 
 
   increment() {
-    /*this.counterService.increment(this.counter.id).subscribe(
+    this.counterService.increment(this.counter.id).subscribe(
       counter => {
         this.counter.value = counter.value;
       }
-    );*/
-    this.counterService.increment(this.counter.id);
+    );
+    //this.counterService.increment(this.counter.id);
   }
 
 }

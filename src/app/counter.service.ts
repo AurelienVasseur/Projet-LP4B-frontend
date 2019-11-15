@@ -34,9 +34,9 @@ export class CounterService {
   reset() {
   }
 
-  increment(id: number) { // : Observable<Counter>
-    // return this.http.patch<Counter>(this.counterUrl + id + '.json', {});
-    this.http.patch<any>('https://jolly-neumann-a525f1.netlify.com/.netlify/functions/increment', { counterId: id }).subscribe();
+  increment(id: number): Observable<Counter> { 
+    return this.http.patch<Counter>(this.counterUrl + id + '.json', {});
+    //return this.http.patch<any>('https://jolly-neumann-a525f1.netlify.com/.netlify/functions/increment', { counterId: id });
   }
 
   getCounter(id: number): Observable<Counter> {
