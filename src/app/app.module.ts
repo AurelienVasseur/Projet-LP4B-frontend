@@ -19,6 +19,9 @@ import { ProfileComponent } from './profile/profile.component';
 import { Routes, RouterModule } from '@angular/router';
 import { MatMenuModule } from '@angular/material/menu';
 import { CounterCardComponent } from './counter-card/counter-card.component';
+import { WsComponent } from './ws/ws.component';
+import { ActionCableService } from 'angular2-actioncable';
+
 
 
 
@@ -29,7 +32,8 @@ import { CounterCardComponent } from './counter-card/counter-card.component';
     NavbarComponent,
     HomeComponent,
     ProfileComponent,
-    CounterCardComponent
+    CounterCardComponent,
+    WsComponent
   ],
   imports: [
     BrowserModule,
@@ -45,7 +49,7 @@ import { CounterCardComponent } from './counter-card/counter-card.component';
     HttpClientModule,
     MatMenuModule
   ],
-  providers: [],
+  providers: [ActionCableService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
