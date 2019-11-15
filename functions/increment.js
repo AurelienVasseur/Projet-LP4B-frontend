@@ -5,16 +5,32 @@ exports.handler = async (event, context) => {
     const counterId = event.body.counterId;
     const route = "https://lp4asgadot.herokuapp.com/counters/" + counterId +'.json';
 
-    return fetch(route, { 
+    /*return fetch(route, { 
         headers: { "Accept": "application/json" },
         method: "PATCH"
     })
-    .then(response => response.json())
+    .then(response => console.log(response))
     .then(data => ({
       statusCode: 200,
       body: data
     }))
-    .catch(error => ({ statusCode: 422, body: String(error) }));
+    .catch(error => ({ statusCode: 422, body: String(error) }));*/
+
+
+    return fetch(route, {
+      headers: {
+        "content-type": "application/json"
+      },
+      method: "PATCH"
+    })
+      .then(() => ({
+        statusCode: 200,
+        body: `Updated`
+      }))
+      .catch(error => ({
+        statusCode: 422,
+        body: `Oops! Something went wrong. ${error}`
+      }));
 };
 
 
