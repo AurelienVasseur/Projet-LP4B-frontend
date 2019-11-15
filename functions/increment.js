@@ -1,11 +1,11 @@
-import fetch from "node-fetch";
+const fetch = require('node-fetch');
 
 const API_ENDPOINT = "https://lp4asgadot.herokuapp.com/counters/";
 
 exports.handler = async (event, context) => {
-    const id = event.queryStringParameters.id;
+    const counterId = event.body.counterId;
 
-    const route = API_ENDPOINT + id;
+    const route = API_ENDPOINT + counterId +'.json';
 
     return fetch(route, { 
         headers: { "Accept": "application/json" },

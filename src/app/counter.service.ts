@@ -32,13 +32,11 @@ export class CounterService {
   } 
 
   reset() {
-    //this.initialValue = [0, 0, 0];
   }
 
-  increment(id: number): Observable<Counter> {
-    /*this.initialValue[position]++;
-    return this.initialValue[position];*/
-    return this.http.patch<Counter>(this.counterUrl + id + '.json', {});
+  increment(id: number) { //: Observable<Counter>
+    // return this.http.patch<Counter>(this.counterUrl + id + '.json', {});
+    this.http.patch<any>('/.netlify/functions/increment', { counterId: id }).subscribe();
   }
 
   getCounter(id: number): Observable<Counter> {
