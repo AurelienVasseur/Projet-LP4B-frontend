@@ -1,11 +1,9 @@
 const fetch = require('node-fetch');
 
-/*const API_ENDPOINT = "https://lp4asgadot.herokuapp.com/counters/";
 
 exports.handler = async (event, context) => {
     const counterId = event.body.counterId;
-
-    const route = API_ENDPOINT + counterId +'.json';
+    const route = "https://lp4asgadot.herokuapp.com/counters/" + counterId +'.json';
 
     return fetch(route, { 
         headers: { "Accept": "application/json" },
@@ -14,13 +12,13 @@ exports.handler = async (event, context) => {
     .then(response => response.json())
     .then(data => ({
       statusCode: 200,
-      body: data.joke
+      body: data
     }))
     .catch(error => ({ statusCode: 422, body: String(error) }));
 };
-*/
 
-exports.handler = async (event, context) => {
+
+/*exports.handler = async (event, context) => {
     //console.log(JSON.stringify(event),JSON.stringify(context) )
     console.log("Params : " + event.body);
 
@@ -36,4 +34,4 @@ exports.handler = async (event, context) => {
         statusCode: 201,
         body: "Updated"
     };
-};
+};*/
