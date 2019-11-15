@@ -36,9 +36,9 @@ export class CounterComponent implements OnInit {
 
   increment() {
     this.counterService.increment(this.counter.id)
-      .subscribe(counter => {
+      /*.subscribe(counter => {
         this.counter.value = counter.value;
-      });
+      });*/
   }
 
 }
