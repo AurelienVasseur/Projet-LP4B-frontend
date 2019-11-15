@@ -3,6 +3,6 @@ exports.handler = async (event, context) => {
 
     return {
         statusCode: 200,
-        body: `Compteur : ${name}`
+        body: `Compteur : ${id}`
     };
 };
